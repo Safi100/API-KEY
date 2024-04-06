@@ -15,8 +15,9 @@ app.use(morgan('dev'));
 // models
 const Api_key = require('./models/api_key');
 
-app.get('/', (req, res) => {
-    res.send('Hello World!');
+app.get('/api-keys', async (req, res) => {
+    const apiKeys = await Api_key.find();
+    res.json(apiKeys);
 });
 app.post('/generate-api-key', async (req, res) => {
     try{
