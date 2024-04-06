@@ -20,6 +20,10 @@ const KeySchema = new Schema({
     expiration_date: {
         type: Date,
         required: [true, 'expiration date is required']
+    },
+    usuage_per_month: {
+        type: Number,
+        default: 0
     }
 }, {timestamps: true});
 
