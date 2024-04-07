@@ -24,6 +24,10 @@ const KeySchema = new Schema({
     usuage_per_month: {
         type: Number,
         default: 0
+    },
+    last_reset_date: {
+        type: Date,
+        default: null
     }
 }, {timestamps: true});
 
